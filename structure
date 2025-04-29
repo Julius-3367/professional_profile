@@ -1,0 +1,11 @@
+professional_profile/
+├── App/
+│   ├── static/
+│   │   ├── tailwind.css
+│   │   └── script.js
+│   ├── templates/
+│   │   └── index.html
+│   ├── app.py
+├── requirements.txt
+├── Procfile
+

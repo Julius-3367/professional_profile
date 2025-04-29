@@ -1,0 +1,45 @@
+/* Custom overrides and additional utility styles */
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Reusable button styles */
+.btn-primary {
+    @apply bg-primary-500 text-white px-6 py-2 rounded-full transition-colors duration-300 hover:bg-primary-600;
+}
+
+.btn-outline {
+    @apply border-2 border-primary-500 text-primary-500 px-6 py-2 rounded-full transition-colors duration-300 hover:bg-primary-500 hover:text-white;
+}
+
+/* Section headings */
+.section-title {
+    @apply text-3xl font-bold mb-8 text-center text-primary-700 dark:text-primary-300;
+}
+
+/* Custom cards */
+.card {
+    @apply bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transition-all duration-300;
+}
+
+.card:hover {
+    @apply scale-105 shadow-xl;
+}
+
+/* Contact icons */
+.contact-icon {
+    @apply text-3xl text-primary-500 p-3 bg-primary-100 dark:bg-primary-900 rounded-full transition-transform group-hover:rotate-12;
+}
+
+/* Smooth dark mode transition */
+html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Particles background layer */
+#particles-js {
+    z-index: -1;
+    opacity: 0.15;
+}
