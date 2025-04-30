@@ -1,45 +1,62 @@
-/* Custom overrides and additional utility styles */
-
+/* ===================================
+   Global Typography and Layout
+=================================== */
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    @apply text-base sm:text-lg bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200;
 }
 
-/* Reusable button styles */
+/* ===================================
+   Buttons
+=================================== */
+
+/* Primary Button */
 .btn-primary {
-    @apply bg-primary-500 text-white px-6 py-2 rounded-full transition-colors duration-300 hover:bg-primary-600;
+    @apply bg-primary-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-colors duration-300 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-400;
 }
 
+/* Outline Button */
 .btn-outline {
-    @apply border-2 border-primary-500 text-primary-500 px-6 py-2 rounded-full transition-colors duration-300 hover:bg-primary-500 hover:text-white;
+    @apply border-2 border-primary-500 text-primary-500 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-colors duration-300 hover:bg-primary-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-400;
 }
 
-/* Section headings */
+/* ===================================
+   Section Titles
+=================================== */
 .section-title {
-    @apply text-3xl font-bold mb-8 text-center text-primary-700 dark:text-primary-300;
+    @apply text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-primary-700 dark:text-primary-300;
 }
 
-/* Custom cards */
+/* ===================================
+   Card Components
+=================================== */
 .card {
-    @apply bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transition-all duration-300;
+    @apply bg-white dark:bg-gray-800 p-4 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300;
 }
 
+/* Slight zoom on hover */
 .card:hover {
-    @apply scale-105 shadow-xl;
+    @apply scale-[1.02];
 }
 
-/* Contact icons */
+/* ===================================
+   Contact Icons
+=================================== */
 .contact-icon {
-    @apply text-3xl text-primary-500 p-3 bg-primary-100 dark:bg-primary-900 rounded-full transition-transform group-hover:rotate-12;
+    @apply text-2xl sm:text-3xl text-primary-500 p-2 sm:p-3 bg-primary-100 dark:bg-primary-900 rounded-full transition-transform group-hover:rotate-12;
 }
 
-/* Smooth dark mode transition */
+/* ===================================
+   Transitions and Dark Mode
+=================================== */
 html {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Particles background layer */
+/* ===================================
+   Background Effects
+=================================== */
 #particles-js {
-    z-index: -1;
-    opacity: 0.15;
+    @apply fixed inset-0 -z-10 opacity-10 sm:opacity-15;
 }
